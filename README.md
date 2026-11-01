@@ -2,7 +2,7 @@
 
 **Author:** Natalie **Host:** Windows PC, Oracle VirtualBox **ISO:** `archlinux-2026.10.01-x86_64.iso` (from archlinux.org/download) **Final result:** Arch Linux with the LXQt desktop, zsh, SSH, a colored terminal, custom aliases, two sudo users (me and codi), and a boot straight into the GUI.
 
-This is the document I wrote for myself so I can rebuild this VM quickly. It is not a copy of the Arch wiki. It shows what I did, every command with a note on what it does, the problems I ran into, and how I fixed them. I followed the Arch Installation Guide wiki by hand and did not use `archinstall`.
+This is the document I wrote for myself so I can rebuild this VM quickly. It is not a copy of the Arch wiki. It shows what I did, every command with a note on what it does, the problems I ran into, and how I fixed them. 
 
 ---
 
@@ -266,18 +266,17 @@ systemctl is-active sshd    # active
 
 ## 13. What I would do differently next time
 
-1. Pick the right ISO for my CPU first.
-2. Check **Skip Unattended Installation** while creating the VM.
-3. Use a simple password at first and change it once everything works.
-4. Copy the EFI fallback file before the first reboot.
-5. Use `systemctl enable --now` so services start immediately.
-6. Take screenshots during the install, not only at the end.
-7. Take a VirtualBox snapshot once the system works, so I can restore it quickly if I break something.
-8. Shut down from inside the VM (`sudo poweroff` or the desktop's Shutdown) instead of closing the window.
+1. Check **Skip Unattended Installation** while creating the VM.
+2. Use a simple password at first and change it once everything works.
+3. Copy the EFI fallback file before the first reboot.
+4. Use `systemctl enable --now` so services start immediately.
+5. Take screenshots during the install, not only at the end.
+6. Take a VirtualBox snapshot once the system works, so I can restore it quickly if I break something.
+
 
 ## 14. What I learned
 
 - How a Linux system fits together: partitions, filesystems, the bootloader, systemd, users, and services.
 - That the live ISO and the installed system are separate, and that `arch-chroot` is how I work "inside" the new one.
-- That an error message can look scary but have a simple cause. "Sorry, try again" looked like a broken account, but it was a typo and a temporary lockout.
+- That an error message can  have a simple cause. "Sorry, try again" over and over was a typo and a temporary lockout.
 - That writing notes while installing made recovering from mistakes much faster.
